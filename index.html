@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, user-scalable=no" />
+      <title>Photo album - Home</title>
+      <link rel="stylesheet" href="public/lightgallery/css/lightgallery.css" />
+      <link rel="stylesheet" href="public/lightgallery/css/lg-exif.min.css" />
+      <link rel="stylesheet" href="public/videojs/video-js.min.css" />
+      <link rel="stylesheet" href="public/core.css" />
+      <link rel="stylesheet" href="public/theme.css" />
+  </head>
+
+  <body>
+
+    <header>
+      <a href="index.html">
+        <h1>Photo album</h1>
+      </a>
+    </header>
+    
+    <!--
+      Breadcrumbs of parent albums
+    -->
+    
+    <!--
+      Nested albums
+    -->
+    <ul id="galleries">
+     <li>
+       <a href="render.html">
+         <h3>render</h3>
+         <div class="meta">
+           1 album, 34 photos<br />
+           21 Sep 2023 - 21 Sep 2023
+         </div>
+         <ul class="grid"><li><img src="media/thumbs/render/images/BatteryMount_2.png" /></li><li><img src="media/thumbs/render/images/MotorPlate.png" /></li><li><img src="media/thumbs/render/images/ServoMount.png" /></li><li><img src="media/thumbs/render/images/DiffCaseNutSide.png" /></li>     </ul>
+       </a>
+     </li>
+    </ul>
+    
+    <!--
+      Render all thumbnails
+    -->
+    <ul id="media">
+    </ul>
+    
+    <!--
+      Pagination
+    -->
+    
+    <!--
+      Zip file link
+    -->
+    
+    
+    <!--
+      Optional footer
+    -->
+    <!-- Video loader -->
+    <div id="videos">
+    </div>
+
+    <!-- jQuery -->
+    <script src="public/jquery.min.js"></script>
+    <!-- VideoJS -->
+    <script src="public/videojs/video.min.js"></script>
+    <!-- LightGallery -->
+    <script src="public/lightgallery/js/lightgallery.js"></script>
+    <script src="public/lightgallery/js/lg-autoplay.js"></script>
+    <script src="public/lightgallery/js/lg-pager.js"></script>
+    <script src="public/lightgallery/js/lg-thumbnail.js"></script>
+    <script src="public/lightgallery/js/lg-video.js"></script>
+    <script src="public/lightgallery/js/lg-exif.min.js"></script>
+
+    <script>
+      $(document).ready(function() {
+        $("#media").lightGallery({
+          thumbWidth: 80,
+          controls: true,
+          loop : false,
+          download: true,
+          counter: true,
+          videojs: true
+        });
+      });
+    </script>
+
+
+  </body>
+
+</html>
